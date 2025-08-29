@@ -62,6 +62,9 @@ function processFile(fileName, fileData) {
     // TODO: Implement error handling
     console.error(err);
   } finally {
+    if (fileName !== undefined){
+      console.log(`Closing file: ${fileName}`)
+    }
     console.log(`Closing processes...`);
   }
 }
